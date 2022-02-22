@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính Tổng 30 Số Tự Nhiên Đầu Tiên Chia Hết Cho 7</h1>
+
+    <button id='btn'>Hiển Thị</button>
+
+    <p id='display'></p>
+
+    <p id='sum'></p>
+    <script>
+     document.getElementById('btn').onclick =
+            function oiDoiOi() {
+                let sum = 0;
+                let display = `30 Số tự nhiên đầu tiên chia hết cho 7 là:`;
+                let displaySum = `=> Tổng 30 số tự nhiên đầu tiên chia hết cho 7 là `;
+
+                for (let i = 0; i < 30; i++) {
+                    sum += i * 7; //tính tổng
+                    display += ` ${i*7}, `; //hiện số tự nhiên
+                    console.log('i ===', i);
+                    console.log('sum ===', sum);
+                }
+
+                displaySum += `${sum}` //hiện tổng
+                document.getElementById('display').innerText = display;
+                document.getElementById('sum').innerText = displaySum;
+            }
+    </script>
+</body>
+</html>

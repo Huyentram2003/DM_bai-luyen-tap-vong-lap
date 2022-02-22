@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hiển Thị 20 Số Fibonacci Đầu Tiên</h1>
+
+    <button id='s1'>Hiển Thị</button>
+
+    <p id='s2'></p>
+
+
+    <script>
+        document.getElementById('btn').onclick =
+            function display() {
+                let a = 0;
+                let b = 1;
+                let index;
+                let number = 20;
+
+                for (let i = 0; i < number; i++) {
+                    console.log('i ===', i);
+                    index = a + b;
+                    a = b;
+                    b = index;
+                    number += ` ${num1}, ` //hiện số Fib
+                    console.log('num1 ====', num1);
+                    // console.log('num2 ===', num2);
+                    // console.log('num3 =====', num3);
+                }
+                document.getElementById('s2').innerText = number;
+            }
+    </script>
+</body>
+</html>
